@@ -43,43 +43,54 @@
 
 <p>Good:</p>
 
-<pre><code>&amp;
-&gt;
-&lt;
-&#160;
+<pre><code>&amp;amp;
+&amp;gt;
+&amp;lt;
+&amp;#160;
 –
 £</code></pre>
 
 <p>Bad:</p>
 
-<p>   (named entities can invalidate xml/rss/json and are a pain)
-XX; (whatever the number for &lt; is)
-(whatever the hex variant is).</p>
+<pre><code>
+&amp;nbsp;
+&amp;#xa0;
+</code></pre>
 
 <h2>Tags</h2>
 
-<p>Use lowercase</p>
-
-<p>Avoid mis-matched tags.</p>
+<ul>
+  <li>Use lowercase</li>
+  <li>Avoid mis-matched tags.</li>
+</ul>
 
 <p>Bad:</p>
 
-<p><a href="/"><em>link</em></a></p>
+<pre><code>
+  <a href="/"><em>link</em></a>
+</code></pre>
 
 <h3>Attributes</h3>
 
-<p>Always use double quotes where there's content
-Use the shorter style for boolean attributes.</p>
+<ul>
+  <li>Always use double quotes where there's content</li>
+  <li></li>Use the shorter style for boolean attributes.</li>
+</ul
 
-<p>Good</p>
+<p>Good:</p>
 
-<p><a href="/"></a>
-</p>
+<pre><code>
+  <a href="/"></a>
+  <input required>
+</code></pre>
 
-<p>Bad</p>
+<p>Not-so-good:</p>
 
-<p><a href="/"></a>
-</p>
+<pre><code>
+  <a href=/></a>  
+  <a href='/'></a>
+  <input required="required">
+</code></pre>
 
 <p>Empty tags</p>
 
