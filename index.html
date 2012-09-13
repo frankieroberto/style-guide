@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Style-guide : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Style-guide</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/frankieroberto/style-guide">View on GitHub</a>
+
+          <h1 id="project_title">Style-guide</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/frankieroberto/style-guide/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/frankieroberto/style-guide/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>HTML5 Style Guide</h1>
+
+<h2>General</h2>
+
+<p>In authoring environments, indent nested tags with 'soft tabs' of two spaces. (These can be stripped when actually serving the page to a client)</p>
+
+<h3>Text</h3>
+
+<p>The only characters that should be escaped are '&lt;', '&gt;', '&amp;', which have named entities, and any special whitespace characters, which should be escaped using their numerical code..</p>
+
+<p>Good:</p>
+
+<p>&amp;
+&gt;
+&lt;
+   (non-breaking space)
+–  (em-dash)
+£</p>
+
+<p>Bad:</p>
+
+<p>   (named entities can invalidate xml/rss/json and are a pain)
+XX; (whatever the number for &lt; is)
+(whatever the hex variant is).</p>
+
+<h2>Tags</h2>
+
+<p>Use lowercase</p>
+
+<p>Avoid mis-matched tags.</p>
+
+<p>Bad:</p>
+
+<p><a href="/"><em>link</em></a></p>
+
+<h3>Attributes</h3>
+
+<p>Always use double quotes where there's content
+Use the shorter style for boolean attributes.</p>
+
+<p>Good</p>
+
+<p><a href="/"></a>
+</p>
+
+<p>Bad</p>
+
+<p><a href="/"></a>
+</p>
+
+<p>Empty tags</p>
+
+<p>No need for a trailing slash.</p>
+
+<p>Good:</p>
+
+<p></p><hr><br><p>Not-so-good:</p>
+
+<p></p><hr><br><h3>HTML page structure:</h3>
+
+<p>Always start with minimal doctype and include , </p> and  tags (even though they're not required).
+
+<p>Good:</p>
+
+<p>&lt;!doctype html&gt;
+
+  </p>
+  
+
+
+<h2>Text-level semantics</h2>
+
+<h3>Citations</h3>
+
+<p>Only use  for the titles of books, films, journal articles &amp; plays. Don't bother for the titles of blog posts, news articles, wikipedia entries, magazine titles or anything else. Never use for the names of people or products.</p>
+
+<h3>Emphasis</h3>
+
+<p>Only use <em> to mark words or short phrases which would be stressed when spoken aloud.</em></p>
+
+<p>Good:</p>
+
+<p>He <em>really</em> hated it
+The music was <em>loud</em></p>
+
+<p>Bad:</p>
+
+<p><em>She asked the person for a ticket.</em>
+In <em>Star Wars</em>, he had a hit.</p>
+
+<h3>Strong emphasis</h3>
+
+<p>Only use strong to mark key words (usually nouns) that are especially relevant. In practice: rarely use it.</p>
+
+<p>Good:</p>
+
+<p>The conference was about <strong>user-experience design</strong>.
+You searched for <strong>Christmas</strong>.</p>
+
+<p>Bad:</p>
+
+<p>She <strong>really, really</strong> loved it.
+Search matches: "She loved <strong>Christmas</strong>…"</p>
+
+<h3>Italics</h3>
+
+<p>Use <i> for any cases not covered by <em> or  where being typographically-marked (typically with italics) is essential to the meaning of the text and isn't just styling. Typically 'an alternate voice'. In practice: use rarely.</em></i></p>
+
+<p>Good:</p>
+
+<p>It might work. <i>It might not.</i></p>
+
+<p>Bad:</p>
+
+<p>She <i>loved</i> it    - use <em>
+I read <i>Macbeth</i>  - use 
+<blockquote><i>To be or not to be?</i></blockquote> - use CSS.</em></p>
+
+<h2>Structure</h2>
+
+<h3>Navigation links</h3>
+
+<p>Use case: top-navs, side-navs, footer-navs, etc.</p>
+
+<p>Best practice:</p>
+
+<p> <a href=""></a>
+  <a href=""></a>
+ </p>
+
+<p>Anti-patterns:</p>
+
+<ul>
+<li><a href=""></a></li>
+  <li><a href=""></a></li>
+</ul><p> <ul>
+<li><a href=""></a></li>
+    <li><a href=""></a></li>
+  </ul> </p>
+
+<p> <a href=""></a> | <a href=""></a>
+ </p>
+
+<h3>Headers</h3>
+
+<p>with sub-headers</p>
+
+<p> <h1></h1>
+  <h2></h2>
+ </p>
+
+<p>Anti-patterns</p>
+
+<p> <h1></h1>
+  <h2></h2>
+ </p>
+
+<p>without sub-headers</p>
+
+<p>Pattern:</p>
+
+<p> <h1></h1>
+ </p>
+
+<p>Anti-pattern:</p>
+
+<p> <h1></h1>
+ </p>
+
+<p>Outlines</p>
+
+<p>Use both numerically ascending h tags as well as sections for maximum compatibility with outlining algorithms.</p>
+
+<p>Good:</p>
+
+<p> </p>
+
+<h1>Title</h1>
+
+<p>Intro</p>
+
+<p> <h2>Section title</h2>
+  <p>Paragraph</p>
+ </p>
+
+<p>OK:</p>
+
+<p> </p>
+
+<h1>Title</h1>
+
+<p>Intro</p>
+
+<h2>Section title</h2>
+
+<p>Paragraph</p>
+
+<p></p>
+
+<p>Not-so-good:</p>
+
+<p> </p>
+
+<h1>Title</h1>
+
+<p>Intro</p>
+
+<p> <h1>Section title</h1>
+  <p>Paragraph</p>
+ </p>
+
+<p> </p>
+
+<h1>Title</h1>
+
+<p>Intro</p>
+
+<h3>Section title</h3>
+
+<p>Paragraph</p>
+
+<p></p>
+
+<p>Forms</p>
+
+<p>Add the 'required' attribute to any fields that are truly required (i.e. would cause the user to have to correct the error if left blank).</p>
+
+<p>Always associate labels with input elements</p>
+
+<p>Good</p>
+
+<p>Name: </p>
+
+<p>OK</p>
+
+<p>Name: </p>
+
+<p>Bad</p>
+
+<p>Name:  (required)</p>
+
+<h3>Images</h3>
+
+<p>Don't bother with height or width attributes. These are now better controlled with CSS, and adding the explicit attributes makes it hard to override in CSS.</p>
+
+<p>Alt tags</p>
+
+<p>See specs for alt tag guidelines.</p>
+
+<p>Good:</p>
+
+<p><a href=""><img alt="BBC"></a>
+<a href=""><img alt="" src="bbc.png"> BBC</a>
+Price: <img alt="$$$">
+Instructions: <img alt="1. Open Box 2. locate components …"></p>
+
+<p>OK:</p>
+
+<p><img alt="" src="monalisa.jpg"> The Mona Lisa is an enigmatic painting. 
+You uploaded this image: <img src=""></p>
+
+<p>Bad:</p>
+
+<p><a href=""><img alt="BBC" src="bbc.png"> BBC</a></p>
+
+<p>Include a title attribute if applicable, but don't duplicate a caption.</p>
+
+<p>Enclose image in  if it's a significant piece of content.</p>
+
+<div>s and s
+
+Feel free to insert these wherever you need a hook for CSS or javascript, as they are semantic-free. However don't use a <div> within an inline tag, and don't use a  for content which would normally be block-level.
+
+Good:
+
+ Published last year  <div>Published yesterday.</div>
+
+<p></p>
+<div>© 2001</div>
+ <p>Bad:</p>
+
+<p> ***
+  <p>Intro</p>
+ </p>
+
+<p>Good:</p>
+
+<img alt="" src="" title="Mona Lisa">The world's most famous artwork<p>OK:</p>
+
+<img alt="" src="">Mona Lisa<p>Intro</p>
+
+<p><img src="" title="Mona Lisa" alt=""></p>
+
+<p>Bad:</p>
+
+<img alt="" src="" title="Mona Lisa">Mona Lisa<p><img src="" title="Mona Lisa" alt=""></p>
+
+<p><img alt="Mona Lisa" title="Mona Lisa" src=""></p>  </div>
+</div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Style-guide maintained by <a href="https://github.com/frankieroberto">frankieroberto</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
